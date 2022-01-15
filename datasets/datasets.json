@@ -1,0 +1,10 @@
+{
+    "dataset1": {
+        "text": "sha1://d6a50130984304e8bec2bfc539e4e33d1f948aef/file.txt",
+        "truth": "sha1://eed52bc040941768e17007742ef96fa9287e4a4f/file.json"
+    },
+    "dataset2": {
+        "text": "sha1://066a6dfa6209ae1fa5af5d68d169b1047b52fbf7/file.txt",
+        "truth": "sha1://8a70b76b8376f1c7045ff7d5bcf9fd0800922f22/file.json"
+    }
+}

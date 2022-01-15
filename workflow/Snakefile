@@ -1,0 +1,11 @@
+include: "rules/load_dataset.smk"
+include: "rules/load_truth.smk"
+include: "rules/run_job.smk"
+include: "rules/compare.smk"
+include: "rules/result.smk"
+include: "rules/aggregate.smk"
+include: "rules/output.smk"
+
+rule all:
+    input:
+        'output.md'

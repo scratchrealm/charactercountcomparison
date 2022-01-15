@@ -1,0 +1,4 @@
+data
+dag.tmp.pdf
+.snakemake
+*.pyc
