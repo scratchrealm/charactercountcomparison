@@ -12,9 +12,13 @@ The three algorithms being tested are:
 * alg2: subsample *every fifth* character and then estimate the full counts
 * alg3: subsample *every tenth* character and then estimate the full counts
 
-Python implementations of these are found [here](./algorithms).
+Python implementations of these are found [here](./workflow/rules/algorithms).
 
 The automatically-generated results are found in [output.md](output.md)
+
+## Workflow
+
+The workflow for this project is defined in [snakemake](https://snakemake.readthedocs.io/en/stable/index.html) files (.smk) files in the [workflow/rules](workflow/rules) directory.
 
 ## Setup
 
