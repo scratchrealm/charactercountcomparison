@@ -1,4 +1,4 @@
-from datasets import datasets
+from all_datasets import datasets
 
 
 rule load_truth:

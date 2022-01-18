@@ -5,7 +5,7 @@ import kachery_client as kc
 
 def main():
     out = {}
-    for ds_name in ['dataset1', 'dataset2']:
+    for ds_name in ['dataset1', 'dataset2', 'dataset3']:
         fname = 'files/' + ds_name + '.txt'
         fname_truth = 'files/' + ds_name + '.truth.json'
         true_result = {}

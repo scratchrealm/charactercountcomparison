@@ -2,7 +2,7 @@ from trials import trials
 
 
 rule aggregate:
-    input: [f'data/results/{x["algorithm"]}_{x["dataset"]}.json' for x in trials]
+    input: [f'data/results/{x["algorithm"]["name"]}_{x["dataset"]}.json' for x in trials]
     output: 'data/aggregated_results.json'
     run:
         import json

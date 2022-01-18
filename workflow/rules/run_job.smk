@@ -9,11 +9,6 @@ rule run_job:
     output: 'data/job_results/{algorithm}_{dataset}.json'
     run:
         import json
+        import kachery_client as kc
         algorithm = params.algorithm
-        job_result = apply_algorithm_to_dataset(algorithm, input[0])
-        with open(output[0], 'w') as f:
-            json.dump(
-                job_result,
-                f,
-                indent=4
-            )
+        job_result = apply_algorithm_to_dataset(algorithm, input[0], output[0])

@@ -1,14 +1,54 @@
 # character count comparison
 
-This is a generic template repo for comparing algorithms on datasets.
+This is a template repo for comparing algorithms on datasets.
 
-The algorithms in this toy example simply attempt to count the number of occurances of each letter (a-z) in a text file. I realize this is completely trivial, but it's a placeholder for more interesting applications.
+The algorithms in this toy example simply estimate the number of occurrences of each letter (a-z) in a text file. I realize this is a rather trivial task, but it's a placeholder for more interesting applications.
 
-Sample datasets (text files) are provided in the datasets folder. The [datasets/datasets.json](datasets/datasets.json) JSON file contains all of these as kachery references, together with ground truth on the character counts.
+Some sample datasets (text files) are provided in the datasets folder. The [datasets/datasets.json](datasets/datasets.json) JSON file contains all of these as kachery references, together with ground truth on the character counts.
 
-The two algorithms being tested are:
+The three algorithms being tested are:
 
-* alg1: subsample every other character and then estimate the full counts
-* alg2: subsample every fifth character and then estimate the full counts
+* alg1: subsample *every other* character and then estimate the full counts
+* alg2: subsample *every fifth* character and then estimate the full counts
+* alg3: subsample *every tenth* character and then estimate the full counts
 
-The results are found in [output.md](output.md)
+Python implementations of these are found [here](./algorithms).
+
+The automatically-generated results are found in [output.md](output.md)
+
+## Setup
+
+This project uses [snakemake](https://snakemake.readthedocs.io/en/stable/index.html) and [kachery](https://github.com/kacheryhub/kachery-doc)
+
+Prerequisites:
+* [install snakemake](https://snakemake.readthedocs.io/en/stable/getting_started/installation.html)
+* [Install and set up kachery](https://github.com/kacheryhub/kachery-doc/blob/main/doc/hostKacheryNode.md)
+
+## Running the workflow
+
+To run the workflow, clone this repo and `cd` to the base directory. Then:
+
+```bash
+# Run the workflow
+snakemake -p -c1
+```
+
+To force rerun:
+
+```bash
+# Force rerun the workflow
+snakemake -F -p -c1
+```
+
+## Creating the DAG of the workflow
+
+To create a .pdf file of the directed acyclic graph (DAG) of the workflow, clone this repo and `cd` to the base directory. Then:
+
+```bash
+# Create dag.tmp.pdf
+snakemake -F --rulegraph | dot -Tpdf > dag.tmp.pdf
+```
+
+## Authors
+
+Jeremy Magland

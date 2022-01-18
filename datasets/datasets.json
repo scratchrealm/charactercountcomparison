@@ -6,5 +6,9 @@
     "dataset2": {
         "text": "sha1://066a6dfa6209ae1fa5af5d68d169b1047b52fbf7/file.txt",
         "truth": "sha1://8a70b76b8376f1c7045ff7d5bcf9fd0800922f22/file.json"
+    },
+    "dataset3": {
+        "text": "sha1://436e64dad18499150b35b17263c85ce9ab7ebabc/file.txt",
+        "truth": "sha1://6328549a6c19e4e3ece868a794b4db79f355c792/file.json"
     }
 }

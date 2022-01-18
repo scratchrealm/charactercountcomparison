@@ -6,6 +6,7 @@ rule output:
         with open(input[0], 'r') as f:
             aggregated_results = json.load(f)
         md_text = ''
+        md_text += 'These results were automatically generated\n\n'
         for result in aggregated_results:
             md_text += f'___\n\n'
             md_text += f'```\n'
