@@ -1,4 +1,4 @@
-from compare_output_to_truth import compare_output_to_truth
+from compare_with_truth.compare_with_truth import compare_with_truth
 
 
 rule compare:
@@ -11,11 +11,9 @@ rule compare:
         import json
         algorithm = params.algorithm
         dataset = params.dataset
-        with open(input.d, 'r') as f:
-            job_result = json.load(f)
-        with open(input.t, 'r') as f:
-            truth = json.load(f)
-        error = compare_output_to_truth(job_result, truth)
+        result_fname = input.d
+        truth_fname = input.t
+        error = compare_with_truth(result_fname, truth_fname)
         with open(output[0], 'w') as f:
             json.dump(
                 {

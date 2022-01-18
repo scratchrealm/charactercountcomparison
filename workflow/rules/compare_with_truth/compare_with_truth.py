@@ -1,7 +1,12 @@
+import json
 from string import ascii_lowercase
 
 
-def compare_output_to_truth(job_result, truth):
+def compare_with_truth(result_fname, truth_fname):
+    with open(result_fname, 'r') as f:
+        job_result = json.load(f)
+    with open(truth_fname, 'r') as f:
+        truth = json.load(f)
     err_count = 0
     total_count = 0
     for c in ascii_lowercase:
