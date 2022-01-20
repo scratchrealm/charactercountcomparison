@@ -1,5 +1,5 @@
 rule output:
-    input: [f'data/aggregated_results.json' for x in trials]
+    input: 'data/aggregated_results.json'
     output: 'output.md'
     run:
         import json
