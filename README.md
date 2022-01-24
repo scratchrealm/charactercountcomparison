@@ -26,7 +26,7 @@ This project uses [snakemake](https://snakemake.readthedocs.io/en/stable/index.h
 
 Prerequisites:
 * [install snakemake](https://snakemake.readthedocs.io/en/stable/getting_started/installation.html)
-* [Install and set up kachery](https://github.com/kacheryhub/kachery-doc/blob/main/doc/hostKacheryNode.md)
+* Install kachery-client: `pip install kachery-client`
 
 ## Running the workflow
 

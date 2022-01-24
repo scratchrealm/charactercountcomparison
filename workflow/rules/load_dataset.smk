@@ -7,8 +7,9 @@ rule load_dataset:
     output: 'data/datasets/{dataset}.txt'
     run:
         import kachery_client as kc
+        kec = kc.EphemeralClient(channel='flatiron1')
         dataset = params.dataset
         ds = datasets[dataset]
-        text = kc.load_text(ds['text'])
+        text = kec.load_text(ds['text'])
         with open(output[0], 'w') as f:
             f.write(text)
